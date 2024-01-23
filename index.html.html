@@ -1,0 +1,437 @@
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127427032-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-127427032-1');
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Roboto|Material+Icons">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+
+    <script src="js/jquery-3.2.0.min.js" defer></script>
+    <script src="js/materialize.min.js" defer></script>
+    <script src="js/select2.min.js" defer></script>
+    <script src="https://pscg.edgefield.edu.sg/js/helpers.js" defer></script>
+    <script src="data/data.js" defer></script>
+    <script src="data/jcdata.js" defer></script>
+    <script src="js/express.js" defer></script>
+    <title>Post Secondary Course Guidance</title>
+</head>
+
+<body>
+    <div class="disclaimerArea">
+        <div class="acknowledgement">This website was inspired by an earlier system developed by Mr Wong Zhi Hao of Chua
+            Chu Kang Secondary School. Many thanks to Mr Wong for sharing his ideas and system with us.</div>
+        <br /><br />
+        Last updated: 03 October 2018
+        <br /><br />
+        This website was developed by Edgefield Secondary School and is designed to be used by secondary school students
+        taking the Singapore-Cambridge GCE 'O' Level examinations. It aims to help students navigate through and explore
+        their post-secondary options based on their examination results.
+        <br /><br />
+        The information contained on the Edgefield Course Guidance website (the "Service") is for reference only. While
+        we have done our best to ensure that the information contained is as accurate and up to date as possible,
+        Edgefield Secondary School assumes no responsibility for errors or omissions on this website. In any case of
+        doubt regarding the accuracy of the information provided, always defer to the information found in the latest
+        version of the Joint Admission Exercise Booklet provided by the Ministry of Education, Singapore.
+        <br /><br />
+        In no event shall Edgefield Secondary School be liable for any special, direct, indirect, consequential, or
+        incidental damages or any damages whatsoever, whether in an action of contract, negligence or other tort,
+        arising out of or in connection with the use of the Service or the contents of the Service. Edgefield Secondary
+        School reserves the right to make additions, deletions, or modifications to the contents on the Service at any
+        time without prior notice.
+        <br /><br />
+        Edgefield Course Guidance website may contain links to external websites that are not provided or maintained by
+        or in any way affiliated with Edgefield Secondary School. Please note that Edgefield Secondary School does not
+        guarantee the accuracy, relevance, timeliness, or completeness of any information of these external websites.
+        <br /><br />
+        <div class="acknowledgement">Wishing all of you the best in your future endeavours!</div>
+    </div>
+    <div class="excelArea">
+        <img src="images/expBonusPoints.png" alt="Bonus Points (Exp)" class="center">
+    </div>
+    <div class="main">
+        <div class="topBarSmall"></div>
+        <div class="topBar">
+            <a href="index.html"><i class="material-icons homeIcon">home</i></a>
+            <div class="topBarText">Post Secondary Course Guidance - Express</div>
+            <a href="https://goo.gl/forms/gDae45n4TCQYe1Dl1" target="_blank"><i
+                    class="material-icons topBarIcon">chat</i></a>
+            <i class="material-icons topBarIcon" id="infoButton">info</i>
+            <!-- <i class="material-icons topBarIcon" id="excelButton">list</i> -->
+        </div>
+        <div class="container" style="width: 100%; margin-top: 80px;">
+            <div class="row">
+                <div class="col s3 fixedSideArea">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="scoreCard z-depth-2">
+                                <div class="row scoreArea margin-bottom-0">
+                                    <div class="col s4 scoreTitle scoreL1R5"></div>
+                                    <div class="col s4 scoreValue">Points</div>
+                                    <div class="col s4 scoreCourseNum"># Courses</div>
+                                </div>
+                                <div class="row scoreArea margin-bottom-0">
+                                    <div class="col s4 scoreTitle scoreL1R5">L1R5</div>
+                                    <div class="col s4 scoreValue" id="scoreL1R5">-</div>
+                                    <div class="col s4 scoreCourseNum" id="scoreL1R5CourseNum">-</div>
+                                </div>
+                                <div class="row scoreArea margin-bottom-0">
+                                    <div class="col s4 scoreTitle scoreL1R4Base">L1R4</div>
+                                    <div class="col s4 scoreValue" id="scoreL1R4Base">-</div>
+                                    <div class="col s4 scoreCourseNum" id="scoreL1R4BaseCourseNum">-</div>
+                                </div>
+                                <div class="row scoreArea margin-bottom-0">
+                                    <div class="col s4 scoreTitle scoreTypeA">ELR2B2 - A</div>
+                                    <div class="col s4 scoreValue" id="scoreL1R4A">-</div>
+                                    <div class="col s4 scoreCourseNum" id="scoreL1R4ACourseNum">-</div>
+                                </div>
+                                <div class="row scoreArea margin-bottom-0">
+                                    <div class="col s4 scoreTitle scoreTypeB">ELR2B2 - B</div>
+                                    <div class="col s4 scoreValue" id="scoreL1R4B">-</div>
+                                    <div class="col s4 scoreCourseNum" id="scoreL1R4BCourseNum">-</div>
+                                </div>
+                                <div class="row scoreArea margin-bottom-0">
+                                    <div class="col s4 scoreTitle scoreTypeC">ELR2B2 - C</div>
+                                    <div class="col s4 scoreValue" id="scoreL1R4C">-</div>
+                                    <div class="col s4 scoreCourseNum" id="scoreL1R4CCourseNum">-</div>
+                                </div>
+                                <div class="row scoreArea margin-bottom-0">
+                                    <div class="col s4 scoreTitle scoreTypeD">ELR2B2 - D</div>
+                                    <div class="col s4 scoreValue" id="scoreL1R4D">-</div>
+                                    <div class="col s4 scoreCourseNum" id="scoreL1R4DCourseNum">-</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideBar z-depth-2">
+                        <div class="sideBarTitle">Enter your grades</div>
+                        <div class="row">
+                            <div class="col s12 input-field">
+                                <div class="sideTitle"></div>
+                                <label>Additional score range for courses</label>
+                                <select class="browser-default" id="scoreRange">
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="99">All</option>
+                                </select>
+                            </div>
+                            <div class="col s6 subjGrade input-field">
+                                <div class="sideTitle"></div>
+                                <label>English Language</label>
+                                <select class="browser-default" id="gradeEL">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                            </div>
+                            <div class="col s6 subjGrade input-field">
+                                <label>Higher MT</label>
+                                <select class="browser-default" id="gradeHMT">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                            </div>
+                            <div class="col s6 subjGrade input-field">
+                                <label>Mother Tongue</label>
+                                <select class="browser-default" id="gradeMT">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                            </div>
+                            <div class="col s6 subjGrade input-field">
+                                <label>CLB</label>
+                                <select class="browser-default" id="gradeCLB">
+                                    <option value="-1" selected></option>
+                                    <option value="1">Merit</option>
+                                    <option value="2">Pass</option>
+                                    <option value="3">Fail</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--<div class="row margin-bottom-0">
+                            <div class="col s8 subjGrade input-field">
+                                <select id="gradeCLB">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                                <label>Chinese B</label>
+                            </div>
+                            <div class="col s4 subjGradeAlert" id="alertCLB"></div>
+                        </div>-->
+                        <div class="row">
+                            <div class="col s6 subjGrade input-field">
+                                <label>Humanities 1</label>
+                                <select class="browser-default" id="gradeHum1">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                            </div>
+                            <div class="col s6 subjGrade input-field">
+                                <label>Humanities 2</label>
+                                <select class="browser-default" id="gradeHum2">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s6 subjGrade input-field">
+                                <label>Science 1</label>
+                                <select class="browser-default" id="gradeSci1">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                            </div>
+                            <div class="col s6 subjGrade input-field">
+                                <label>Science 2</label>
+                                <select class="browser-default" id="gradeSci2">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                            </div>
+                            <div class="col s6 subjGrade input-field">
+                                <label>Science 3</label>
+                                <select class="browser-default" id="gradeSci3">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s6 subjGrade input-field">
+                                <label>E. Maths</label>
+                                <select class="browser-default" id="gradeEMath">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                            </div>
+                            <div class="col s6 subjGrade input-field">
+                                <label>A. Maths</label>
+                                <select class="browser-default" id="gradeAMath">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s6 subjGrade input-field">
+                                <label>D&T / F&N</label>
+                                <select class="browser-default" id="gradeDNT">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                            </div>
+                            <div class="col s6 subjGrade input-field">
+                                <label>Art / Higher Art</label>
+                                <select class="browser-default" id="gradeArt">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                            </div>
+                            <!--<div class="col s6 subjGrade input-field">
+                                <label>Higher Art</label>
+                                <select class="browser-default" id="gradeHigherArt">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                            </div>-->
+                            <div class="col s6 subjGrade input-field">
+                                <label>Music / Higher Music</label>
+                                <select class="browser-default" id="gradeHigherMusic">
+                                    <option value="-1" selected></option>
+                                    <option value="1">A1</option>
+                                    <option value="2">A2</option>
+                                    <option value="3">B3</option>
+                                    <option value="4">B4</option>
+                                    <option value="5">C5</option>
+                                    <option value="6">C6</option>
+                                    <option value="7">D7</option>
+                                    <option value="8">E8</option>
+                                    <option value="9">F9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s6 subjGrade input-field">
+                                <label>Bonus Pts (CCA/HMT/etc) <a href="express.html#" id="excelButton"><i class="material-icons" style="font-size: 18px;">info</i></a></label>
+                                <select class="browser-default" id="gradeBonus">
+                                    <option value="-1" selected></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s3">
+                </div>
+                <div class="col s9">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row filterArea">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <div class="filterAreaTitle">Filter</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12" style="text-align: center;">
+                                        <!--<input class="assignName" id="assignName" type="text" placeholder="Enter teacher name or pick from below">-->
+                                        <select class="filterCourseName browser-default" id="filterCourseName"
+                                            multiple="multiple" style="width: 95%"></select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12" style="text-align: center;">
+                                        <!--<input class="assignName" id="assignName" type="text" placeholder="Enter teacher name or pick from below">-->
+                                        <select class="filterCourseGroup browser-default" id="filterCourseGroup"
+                                            multiple="multiple" style="width: 95%"></select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12" style="text-align: center;">
+                                        <!--<input class="assignName" id="assignName" type="text" placeholder="Enter teacher name or pick from below">-->
+                                        <select class="filterCoursePoly browser-default" id="filterCoursePoly"
+                                            multiple="multiple" style="width: 95%"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row courseAvailableArea"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
