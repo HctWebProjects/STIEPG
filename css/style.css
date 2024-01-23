@@ -35,7 +35,7 @@ body {
 }
 
 .topBar {
-    background-color: #0277bd;
+    background-image: linear-gradient(to right top, #1a75fd, #ee60d9, #ff7494, #ffb75d, #fffa67);
     height: 50px;
     width: 100%;
     margin-bottom: 10px;
