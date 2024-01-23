@@ -26,7 +26,6 @@ body {
 }
 
 .topBarSmall {
-    background-image: linear-gradient(to left bottom, #1a75fd, #ee60d9, #ff7494, #ffb75d, #fffa67);
     height: 20px;
     width: 100%;
     position: fixed;
